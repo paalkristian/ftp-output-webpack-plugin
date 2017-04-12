@@ -46,14 +46,14 @@ function FtpOutputFileSystem(options, compiler) {
     this.oldOutputFileSystem.mkdirp,
     this.oldOutputFileSystem
   )(function(path, callback) {
-    this.client.mkdir(this.getFtpOutputPath(path), true, callback)
+    this.client.mkdir(this.getFtpOutputPath(path), true, () => callback())
   })
 
   this.mkdir = wrap(
     this.oldOutputFileSystem.mkdir,
     this.oldOutputFileSystem
   )(function(path, callback) {
-    this.client.mkdir(this.getFtpOutputPath(path), false, callback)
+    this.client.mkdir(this.getFtpOutputPath(path), false, () => callback())
   })
 
   this.rmdir = wrap(
