@@ -1,6 +1,6 @@
 {
   "name": "ftp-output-webpack-plugin",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "output webpack bundles to a ftp server",
   "main": "index.js",
   "author": "shij",
