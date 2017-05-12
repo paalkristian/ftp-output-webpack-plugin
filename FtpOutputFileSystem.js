@@ -81,7 +81,7 @@ function FtpOutputFileSystem(options, compiler) {
     if (!Buffer.isBuffer(data)) {
       data = new Buffer(data, 'utf8')
     }
-    this.client.put(data, this.relative(file), callback)
+    this.client.put(data, this.getFtpOutputPath(file), callback)
   })
 
   this.join = function() {
